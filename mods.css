@@ -1,0 +1,430 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background-color: #f0f0f0; */
+    background-image: linear-gradient(to bottom left, #f0f0f0, #ffffe0 , #ffc0cb );
+    color: #333;
+    padding-top: 100px; /* To account for the floating navbar */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Header and Navbar Styling */
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: #ffffff;
+    padding: 1rem 2rem;
+    padding-left: 120px; /* Tambahkan lebih banyak jarak agar elemen menu tidak menimpa video */
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+header:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+/* Styling untuk video logo di navbar */
+.logo-video {
+    position: absolute;
+    top: 20;
+    left: -80px; /* Tambahkan jarak dari kiri */
+    width: 60px; /* Atur ulang lebar video agar lebih kecil */
+    height: auto;
+    z-index: 1000; /* Agar video muncul di atas konten lain */
+    border-radius: 15px; /* Opsional: tambahkan radius untuk sudut yang lebih lembut */
+}
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Tambahkan posisi relatif untuk menempatkan elemen lain dalam konteks yang benar */
+}
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav-links li {
+    border-radius: 25px; /* Rounded Corners */
+}
+.nav-links a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    display: block;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+.nav-links a:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    transform: scale(1.05);
+}
+/* Social Links */
+.social-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.social-links .logo {
+    width: 24px;
+    height: 24px;
+}
+/* Dark Mode Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 20px; /* Distance from the top of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
+    background-color: #212121;
+    color: white;
+    padding: 1.6rem 1rem; /* Adjust padding to set the size */
+    border: none;
+    border-radius: 25px; /* Adjust for a rounded button */
+    font-size: 1rem; /* Adjust font size for button label */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1001; /* Ensure it is above other elements */
+}
+#theme-toggle:hover {
+    background-color: #333;
+    color: #fff;
+}
+/* Dark Mode Classes */
+.dark-mode {
+    /* background-color: #181818; */
+    background-image: linear-gradient(to bottom left, #454545, #1e1e1e , #181818);
+    color: #ddd;
+}
+.dark-mode header {
+    background-color: #212121;
+}
+.dark-mode .nav-links a {
+    color: #ddd;
+}
+.dark-mode .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.dark-mode #theme-toggle {
+    background-color: #ddd;
+    color: #212121;
+}
+@font-face {
+    font-family: 'Cartis Beautyful';
+    src: url('font/cbs.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.home-section {
+    text-align: center;
+    padding: 5rem 2rem; /* Add more padding for a spacious look */
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    position: relative;
+    width: 90%; /* Ensure full width */
+    margin: 0 auto; /* Center align if necessary */
+}
+.profile-container {
+    margin-bottom: 2rem; /* Space between profile photo and text */
+}
+.profile-container h1:nth-of-type(2) {
+    font-family: 'Cartis Beautyful', sans-serif;
+}
+.details-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.welcome-message {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.skills {
+    margin-bottom: 2rem;
+}
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007BFF; /* Match the theme color */
+}
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.skills-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+.skills-list img {
+    width: 35px;
+    height: 35px;
+}
+.cta {
+    margin-top: 2rem;
+}
+.cta-button {
+    background-image: linear-gradient(to right, #007bff, #3536df, #06c6c0);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.cta-button:hover {
+    background-image: linear-gradient(to bottom right, #06c6c0, #06c6c0);
+    transform: scale(1.05); /* Membuat tombol sedikit lebih besar saat di-hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan saat hover */
+}
+/* Dark Mode Styling for Home Section */
+.dark-mode .home-section {
+    background-color: #212121; /* Dark background */
+    color: #ddd; /* Light text color */
+}
+.dark-mode .skills h2 {
+    color: #00d4ff; /* Accent color in dark mode */
+}
+.dark-mode .cta-button {
+    background-color: #0056b3; /* Darker blue for dark mode */
+}
+.intro, .name, .role {
+    margin: 0.5rem 0;
+}
+.intro {
+    font-size: 2rem;
+}
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.role {
+    font-size: 1.5rem;
+    color: #007BFF;
+}
+.background-music {
+    display: none; /* Menyembunyikan elemen audio dari tampilan */
+}
+/* About Section Styling */
+.about-section {
+    background-color: #ffffff;
+    color: #333;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1370px;
+    margin: 2rem auto;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #007BFF;
+}
+.about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+/* Dark Mode Styles */
+.dark-mode .about-section {
+    background-color: #212121;
+    color: #ddd;
+}
+.dark-mode .about-section h1 {
+    color: #00d4ff;
+}
+/* Light mode video */
+.logo-video.light-mode {
+    display: block;
+}
+/* Dark mode video */
+.logo-video.dark-mode {
+    display: none;
+}
+/* Dark Mode Styling */
+.dark-mode .logo-video.light-mode {
+    display: none;
+}
+.dark-mode .logo-video.dark-mode {
+    display: block;
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: #ffffff;
+    color: #007BFF;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1370px;
+    margin: 2rem auto;
+    text-align: left;
+    font-size: 28px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.projects-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Memungkinkan scroll secara horizontal */
+    padding: 20px;
+    scroll-snap-type: x mandatory; /* Snap scrolling untuk pengalaman smooth */
+}
+/* Styling for Project Thumbnails */
+.project-thumbnail {
+    width: 500px; /* Atur lebar gambar menjadi lebih kecil */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+}
+/* Project Cards */
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(3, 0, 56, 0.15);
+    padding: 20px;
+    min-width: 250px;
+    flex: 0 0 auto;
+    text-align: left;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: start;
+}
+.project-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+.project-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+.project-card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+.project-card:hover {
+    transform: scale(1.05); /* Memperbesar elemen sedikit */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Menambahkan bayangan lebih dalam */
+}
+.project-card.show {
+    opacity: 1;
+    animation: bounceIn 0.6s ease-out; /* Apply bounce animation */
+}
+/* Hide scroll bar for a cleaner look, while still allowing scrolling */
+.projects-container::-webkit-scrollbar {
+    display: none;
+}
+.projects-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+/* Dark Mode Styles */
+.dark-mode .projects-section {
+    background-color: #212121;
+    color: #ddd;
+}
+.dark-mode .projects-section h1 {
+    color: #00d4ff;
+}
+.dark-mode .projects-container {
+    background-color: #212121;
+    color: #ddd;
+}
+.dark-mode .project-card {
+    background-color: #292929;
+    color: #ddd;
+}
+.contact-section {
+    background-color: #ffffff;
+    color: #333;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1370px;
+    margin: 2rem auto;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.contact-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.contact-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.contact-section li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.contact-section .logo {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+.contact-section .logo:hover {
+    transform: scale(1.1);
+}
+.contact-info {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+.contact-info a {
+    color: #0073b1; /* Warna untuk LinkedIn */
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+/* Dark Mode Styles */
+.dark-mode .contact-section {
+    background-image: radial-gradient( #333 , #212121 );
+    color: #ddd;
+}
+.dark-mode .contact-section h1 {
+    color: #00d4ff;
+}
+@media (max-width: 768px) {
+    /* Mobile Navbar */
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    header {
+        flex-direction: column;
+    }
+    .home-section {
+        padding: 3rem 1rem; /* Adjust padding for smaller screens */
+    }
+    .skills-list {
+        flex-direction: column; /* Stack skills vertically on smaller screens */
+        gap: 1rem;
+    }
+}
