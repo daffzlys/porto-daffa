@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mods.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+                <ul class="social-links">
+                    <li><a href="https://www.linkedin.com/in/daffa-fazly-rashidan-67aa472b0" target="_blank" rel="noopener noreferrer"><img src="gambar/linkedin.png" class="logo" alt="LinkedIn"></a></li>
+                    <li><a href="https://www.instagram.com/daffazly_?igsh=a2pmbTVnMXIweDZn" target="_blank" rel="noopener noreferrer"><img src="gambar/ig.png" class="logo" alt="Instagram"></a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="home" class="home-section">
+            <div class="profile-container">
+                <h1 class="intro">Hello, There</h1>            
+                <h1 class="name">Daffa Fazly Rashidan</h1>
+                <h1 class="role">I’m a Data Scientist</h1>
+            </div>
+            
+            <div class="details-container">
+                <p class="welcome-message">Welcome to my portfolio! I specialize in data science and have a strong passion for uncovering insights from data and creating impactful solutions. Explore my work and feel free to get in touch!</p>
+                
+                <div class="skills">
+                    <h2>Skills & Expertise</h2>
+                    <ul class="skills-list">
+                        <li><img src="gambar/dataanalis.png" alt="Data Analysis"> Data Analysis</li>
+                        <li><img src="gambar/ml.png" alt="Machine Learning"> Machine Learning</li>
+                        <li><img src="gambar/uiux.png" alt="UI/UX Design"> UI/UX Design</li>
+                        <li><img src="  ar/py.png" alt="Python"> Python Programming</li>
+                    </ul>
+                </div>
+                
+                <div class="cta">
+                    <a href="#projects" class="cta-button">Get in Touch</a>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="about" class="about-section">
+            <h1>About Me</h1>
+            <p>Hello! I'm Daffa Fazly Rashidan, a passionate Data Scientist from Universitas Negeri Surabaya. With expertise in data analysis, machine learning, and a keen interest in UI/UX design, I strive to uncover valuable insights and solve complex problems. I enjoy working with diverse datasets to drive data-informed decision-making and creating user-friendly interfaces to enhance user experience. My goal is to contribute to impactful projects and continuously improve my skills in the ever-evolving field of data science.</p>
+        </section>
+
+        
+        <section id="projects" class="projects-section">
+            <h1>Projects</h1>
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card fade-in">
+                    <img src="gambar/ai_analisissentimen.png" alt="Sentiment Analysis Project" class="project-thumbnail">
+                    <h2>Analisis Sentimen Pemilu</h2>
+                    <p>Support Vector Machine (SVM) yang dioptimalkan dengan algoritma genetika <br>untuk menganalisis sentimen di Twitter terkait bakal calon presiden Pemilihan Presiden 2024</p>
+                    <a href="https://github.com/daffarashidan/sentiment-analysis-public-services" target="_blank">View on GitHub</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card fade-in">
+                    <img src="gambar/imk_redesain.png" alt="UI/UX Design Project" class="project-thumbnail">
+                    <h2>Redesign The Siakadu Application Interface</h2>
+                    <p>Penambahan fitur baru dan perubahan desain telah meningkatkan <br>efektivitas, efisiensi, dan kepuasan pengguna.</p>
+                    <a href="https://www.figma.com/file/example" target="_blank">View Prototype</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card fade-in">
+                    <img src="gambar_project/data-viz-thumbnail.jpg" alt="Data Visualization Dashboard" class="project-thumbnail">
+                    <h2>Data Visualization Dashboard</h2>
+                    <p>This project involved creating an interactive data visualization dashboard using Tableau, showcasing sales and performance data from a retail business.</p>
+                    <a href="https://public.tableau.com/views/example" target="_blank">View Dashboard</a>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card fade-in">
+                    <img src="gambar_project/web-scraper-thumbnail.jpg" alt="Python Web Scraper Project" class="project-thumbnail">
+                    <h2>Python Web Scraper for Market Analysis</h2>
+                    <p>Developed a web scraper using Python's BeautifulSoup and Requests libraries to collect market data from e-commerce websites and analyze product trends.</p>
+                    <a href="https://github.com/daffarashidan/python-web-scraper" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+                
+        
+        <section id="Contact" class="contact-section">
+            <h1>Contact</h1>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/daffa-fazly-rashidan-67aa472b0" target="_blank" rel="noopener noreferrer">
+                        <img src="gambar/linkedin.png" class="logo" alt="LinkedIn">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/daffazly_?igsh=a2pmbTVnMXIweDZn" target="_blank" rel="noopener noreferrer">
+                        <img src="gambar/ig.png" class="logo" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="wa.me/6283135364504" target="_blank" rel="noopener noreferrer">
+                        <img src="gambar/wa.png" class="logo" alt="WhatsApp">
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+    </div>
+    
+    <button id="theme-toggle">L</button>
+    
+    <script src="action.js"></script>
+</body>
+</html>
